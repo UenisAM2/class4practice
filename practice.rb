@@ -27,3 +27,38 @@ blockchain = [
 # Anthony's KelloggCoin balance is 2650
 
 # 👇👇👇 Your code HERE 👇👇👇
+
+
+# create new hash with {names, balance}
+    Mainpage = 
+    [ "ben", "brian", "evan", "anthony"]
+
+# for each array in hash, calculate 
+# (1) sum all values to user xxx and
+# (2) delete all values sent by xxx
+
+
+  for name in Mainpage
+    total_balance = 0
+
+    for row in blockchain
+      if row["to_user"] == name
+        total_balance = total_balance + row["amount"]  
+      end
+      
+      if row["from_user"] == name
+        total_balance = total_balance - row["amount"]  
+      end  
+
+    end
+
+  puts "#{name}'s KelloggCoin balance is #{total_balance}"
+      # puts "#{name}"
+
+  end
+
+
+# print final message for all array
+
+# for user in users
+#   put "Anthony's KelloggCoin balance is 2650"
